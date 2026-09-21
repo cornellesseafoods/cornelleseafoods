@@ -32,6 +32,36 @@ header img {
         text-decoration: none;
         font-weight: bold;
         margin: 0 18px;
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #eaf7fb;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #0077a8;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
     }
 
     section {
@@ -54,9 +84,12 @@ header img {
     <a href="#products">PRODUCTS</a> |
     <a href="#contact">CONTACT US</a>
 </nav>
-<section id="home">
-    <h1>Welcome to Cornelle's Seafoods</h1>
-    <p>Quality Products. Reliable Service. Trusted Partnership.</p>
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Cornelle's Seafoods</h1>
+        <p>Quality Products. Reliable Service. Trusted Partnership.</p>
+        <a href="#products" class="hero-button">VIEW OUR PRODUCTS</a>
+    </div>
 </section>
     <section id="about">
     <h2>About Us</h2>
