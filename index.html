@@ -81,6 +81,42 @@ header img {
     font-size: 36px;
     margin-bottom: 25px;
 }
+    .products-section {
+    background-color: #f5f9fb;
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.products-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.products-intro {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h3 {
+    color: #0077a8;
+    font-size: 22px;
+}
 
 .about-content p {
     font-size: 18px;
@@ -128,10 +164,22 @@ header img {
     <section id="products">
     <h2>Our Products</h2>
     <p>Discover our selection of quality seafood products.</p>
-</section>
-    <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Get in touch with Cornelle's Seafoods.</p>
+<section id="products" class="products-section">
+    <h2>Our Products</h2>
+    <p class="products-intro">
+        Discover our selection of quality products.
+    </p>
+    
+<div class="products-grid">
+
+    <div class="product-card">
+        <h3>Product Name</h3>
+        <p>Quality product from Cornelle's Seafoods.</p>
+    </div>
+
+</div>
+        
+</div>
 </section>
 </body>
 </html>
