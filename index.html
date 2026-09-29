@@ -427,7 +427,7 @@ footer p {
     margin-top: 35px;
     padding-top: 35px;
 }
-.subordinates::after {
+.subordinates:has(.team-card + .team-card)::after {
     content: "";
     position: absolute;
     top: 0;
