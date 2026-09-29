@@ -328,11 +328,18 @@ footer p {
 
 .team-card {
     width: 240px;
+    min-height: 185px;
     background-color: #ffffff;
     padding: 25px 15px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
     border-top: 4px solid #0077a8;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-photo {
@@ -367,11 +374,43 @@ footer p {
 }
 
 .department-heads {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
     align-items: start;
     width: 100%;
+    padding-top: 35px;
+}
+
+/* Horizontal line connecting the managers */
+.department-heads::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16.67%;
+    right: 16.67%;
+    height: 2px;
+    background-color: #0077a8;
+}
+
+/* Vertical line going to each manager */
+.org-branch {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.org-branch::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    width: 2px;
+    height: 35px;
+    background-color: #0077a8;
+}
 }
 
 .org-branch {
@@ -399,9 +438,9 @@ footer p {
 }
 
 .small-card {
-    width: 190px;
+    width: 210px;
+    min-height: 185px;
 }
-
 @media (max-width: 768px) {
 
     header img {
