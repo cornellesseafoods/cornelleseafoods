@@ -372,18 +372,17 @@ footer p {
     height: 35px;
     background-color: #0077a8;
 }
-
 .department-heads {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-    align-items: start;
+    column-gap: 45px;
     width: 100%;
     padding-top: 35px;
+    align-items: start;
 }
 
-/* Horizontal line connecting the managers */
+/* Main horizontal line from Vice President to the 3 managers */
 .department-heads::before {
     content: "";
     position: absolute;
@@ -394,7 +393,7 @@ footer p {
     background-color: #0077a8;
 }
 
-/* Vertical line going to each manager */
+/* Each department column */
 .org-branch {
     position: relative;
     display: flex;
@@ -402,6 +401,7 @@ footer p {
     align-items: center;
 }
 
+/* Vertical line from main horizontal line to each manager */
 .org-branch::before {
     content: "";
     position: absolute;
@@ -413,20 +413,30 @@ footer p {
     background-color: #0077a8;
 }
 
-.org-branch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Area below each manager */
 .subordinates {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 15px;
     margin-top: 35px;
     padding-top: 35px;
 }
+
+/* Vertical line coming down from manager */
+.subordinates::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 35px;
+    background-color: #0077a8;
+}
+
+/* Horizontal branch ONLY when there are 2 staff */
 .subordinates:has(.team-card + .team-card)::after {
     content: "";
     position: absolute;
@@ -437,30 +447,28 @@ footer p {
     background-color: #0077a8;
 }
 
+/* Staff cards */
 .subordinates .team-card {
     position: relative;
 }
 
+/* Vertical line from branch to each staff card */
 .subordinates .team-card::before {
     content: "";
     position: absolute;
-    top: -36px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 36px;
-    background-color: #0077a8;
-}
-
-.subordinates::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 36px;
-    background-color: #0077a8;
     top: -35px;
     left: 50%;
     transform: translateX(-50%);
+    width: 2px;
+    height: 35px;
+    background-color: #0077a8;
+}
+
+/* If there is only ONE staff member,
+   connect manager directly to that card */
+.subordinates:not(:has(.team-card + .team-card)) .team-card::before {
+    top: -70px;
+    height: 70px;
 }
 
 .small-card {
