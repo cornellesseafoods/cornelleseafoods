@@ -328,7 +328,7 @@ footer p {
 
 .team-card {
     width: 240px;
-    min-height: 185px;
+    height: 205px;
     background-color: #ffffff;
     padding: 25px 15px;
     border-radius: 10px;
@@ -425,6 +425,30 @@ footer p {
     justify-content: center;
     gap: 15px;
     margin-top: 35px;
+    padding-top: 35px;
+}
+.subordinates::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background-color: #0077a8;
+}
+
+.subordinates .team-card {
+    position: relative;
+}
+
+.subordinates .team-card::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    width: 2px;
+    height: 35px;
+    background-color: #0077a8;
 }
 
 .subordinates::before {
@@ -439,7 +463,8 @@ footer p {
 
 .small-card {
     width: 210px;
-    min-height: 185px;
+    height: 205px;
+}
 }
 @media (max-width: 768px) {
 
