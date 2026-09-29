@@ -289,7 +289,119 @@ footer p {
     margin: 0;
     font-size: 14px;
 }
-    
+
+/* OUR TEAM */
+
+.team-section {
+    background-color: #ffffff;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.team-content {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.team-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #0077a8;
+}
+
+.team-intro {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 45px;
+}
+
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+}
+
+.team-card {
+    width: 240px;
+    background-color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    border-top: 4px solid #0077a8;
+}
+
+.team-photo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-color: #eaf7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.team-card h3 {
+    color: #0077a8;
+    font-size: 18px;
+    margin: 10px 0 6px;
+}
+
+.team-card p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.org-line {
+    width: 2px;
+    height: 35px;
+    background-color: #0077a8;
+}
+
+.department-heads {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    align-items: start;
+    width: 100%;
+}
+
+.org-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subordinates {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.subordinates::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 35px;
+    background-color: #0077a8;
+    top: -35px;
+    left: 50%;
+}
+
+.small-card {
+    width: 190px;
+}
+
 @media (max-width: 768px) {
 
     header img {
@@ -399,6 +511,45 @@ footer p {
     font-size: 16px;
     text-align: left;
 }
+/* OUR TEAM - MOBILE */
+
+.team-section {
+    padding: 60px 20px;
+}
+
+.team-section h2 {
+    font-size: 30px;
+}
+
+.team-intro {
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.team-card {
+    width: 230px;
+}
+
+.department-heads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.org-branch {
+    width: 100%;
+}
+
+.subordinates {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.small-card {
+    width: 210px;
+}
 
 }
 </style>
@@ -418,6 +569,7 @@ footer p {
     <a href="#about">ABOUT US</a>
     <a href="#history">HISTORY</a>
     <a href="#mission-vision">MISSION & VISION</a>
+    <a href="#team">OUR TEAM</a>
     <a href="#products">PRODUCTS</a>
     <a href="#contact">CONTACT US</a>
 </div>
@@ -525,7 +677,98 @@ footer p {
 
     </div>
 </section>
+<section id="team" class="team-section">
+    <div class="team-content">
+        <h2>Our Team</h2>
+        <p class="team-intro">
+            Meet the people behind Cornelle's Seafoods.
+        </p>
 
+        <div class="org-chart">
+
+            <!-- President -->
+            <div class="org-level level-1">
+                <div class="team-card">
+                    <div class="team-photo">👤</div>
+                    <h3>Arnel M. Estaniel</h3>
+                    <p>President & General Manager</p>
+                </div>
+            </div>
+
+            <div class="org-line"></div>
+
+            <!-- Vice President -->
+            <div class="org-level level-2">
+                <div class="team-card">
+                    <div class="team-photo">👤</div>
+                    <h3>Corazon O. Estaniel</h3>
+                    <p>Vice President & Operations Manager</p>
+                </div>
+            </div>
+
+            <div class="org-line"></div>
+
+            <!-- Department Heads -->
+            <div class="org-level department-heads">
+
+                <div class="org-branch">
+                    <div class="team-card">
+                        <div class="team-photo">👤</div>
+                        <h3>Corazon T. Cunanan</h3>
+                        <p>Admin – Finance</p>
+                    </div>
+
+                    <div class="subordinates">
+                        <div class="team-card small-card">
+                            <div class="team-photo">👤</div>
+                            <h3>Julien Pearl C. Furio</h3>
+                            <p>Payroll</p>
+                        </div>
+
+                        <div class="team-card small-card">
+                            <div class="team-photo">👤</div>
+                            <h3>Jennilyn L. Duran</h3>
+                            <p>Sales Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="org-branch">
+                    <div class="team-card">
+                        <div class="team-photo">👤</div>
+                        <h3>Mary Joy L. Demasu-ay</h3>
+                        <p>Plant Manager</p>
+                    </div>
+
+                    <div class="subordinates">
+                        <div class="team-card small-card">
+                            <div class="team-photo">👤</div>
+                            <h3>Ademir Villanueva</h3>
+                            <p>Warehouse & Logistics Supervisor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="org-branch">
+                    <div class="team-card">
+                        <div class="team-photo">👤</div>
+                        <h3>Rubilyn E. Malvez</h3>
+                        <p>Quality Assurance Manager</p>
+                    </div>
+
+                    <div class="subordinates">
+                        <div class="team-card small-card">
+                            <div class="team-photo">👤</div>
+                            <h3>John Renz Duran</h3>
+                            <p>QA-QC Staff</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 <section id="products" class="products-section">
     <h2>Our Products</h2>
     <p class="products-intro">
